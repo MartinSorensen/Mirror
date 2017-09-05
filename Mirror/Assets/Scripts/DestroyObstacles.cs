@@ -12,7 +12,7 @@ public class DestroyObstacles : MonoBehaviour
         }
         if (other.CompareTag("Player"))
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 }
