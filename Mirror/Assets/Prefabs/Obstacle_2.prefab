@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23199753665625800}
   - component: {fileID: 114826367355788506}
   - component: {fileID: 114211266658544568}
+  - component: {fileID: 114146367059277762}
   m_Layer: 0
   m_Name: Obstacle_2
   m_TagString: Obstacles
@@ -95,6 +96,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114146367059277762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775467443097294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b9e98e4b148b24393f60ee49a8cfc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 1
 --- !u!114 &114211266658544568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,4 +132,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfc6a2396f3e0a42b51ad8ae456eaa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeeed: 15
+  movementSpeeed: 10

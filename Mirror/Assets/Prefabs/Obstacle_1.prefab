@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23400668068702064}
   - component: {fileID: 114442248840880326}
   - component: {fileID: 114484274474539980}
+  - component: {fileID: 114726855330636828}
   m_Layer: 0
   m_Name: Obstacle_1
   m_TagString: Obstacles
@@ -106,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfc6a2396f3e0a42b51ad8ae456eaa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeeed: 15
+  movementSpeeed: 10
 --- !u!114 &114484274474539980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,3 +121,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dissolveControlSpeeed: 1
   timeToDissolve: 1.2
+--- !u!114 &114726855330636828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1915799860265522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b9e98e4b148b24393f60ee49a8cfc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 1

@@ -78,6 +78,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\RotateField.cs" />
     <Compile Include="Assets\Scripts\DestroyObstacles.cs" />
     <Compile Include="Assets\Scripts\InterpolateControl.cs" />
     <Compile Include="Assets\Scripts\moveObstacles.cs" />

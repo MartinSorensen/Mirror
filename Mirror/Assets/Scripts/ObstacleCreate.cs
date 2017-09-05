@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObstacleCreate : MonoBehaviour
 {
     public GameObject[] obstacles = new GameObject[3];
+    public GameObject spawnObject;
+    private Transform spawnLocation;
     public float maxTime = 3;
     public float minTime = 0.2f;
     public float xSpawnOffset = 33.0f;
@@ -26,7 +28,9 @@ public class ObstacleCreate : MonoBehaviour
     void Start()
     {
         SetRandomness();
+        spawnLocation = spawnObject.GetComponent<Transform>();
         time = minTime;
+
     }
 
     void FixedUpdate()
@@ -50,13 +54,13 @@ public class ObstacleCreate : MonoBehaviour
 
         if (locationCtrl == true)
         {
-            Instantiate(obstacles[randomIndexer], new Vector3(xSpawnOffset, ySpawnOffset, zTopSpawnOffset + (obstacles[randomIndexer].GetComponent<Transform>().localScale.z / 2)), Quaternion.identity);
-            Instantiate(obstacles[randomIndexer], new Vector3(xSpawnOffset, ySpawnOffset, -zTopSpawnOffset - (obstacles[randomIndexer].GetComponent<Transform>().localScale.z / 2)), Quaternion.identity);
+            Instantiate(obstacles[randomIndexer], new Vector3(spawnLocation.position.x + xSpawnOffset, spawnLocation.position.y + ySpawnOffset, spawnLocation.position.z + zTopSpawnOffset + (obstacles[randomIndexer].GetComponent<Transform>().localScale.z * 0.5f)), Quaternion.identity);
+            Instantiate(obstacles[randomIndexer], new Vector3(spawnLocation.position.x + xSpawnOffset, spawnLocation.position.y + ySpawnOffset, spawnLocation.position.z - zTopSpawnOffset - (obstacles[randomIndexer].GetComponent<Transform>().localScale.z * 0.5f)), Quaternion.identity);
         }
         else if (locationCtrl == false)
         {
-            Instantiate(obstacles[randomIndexer], new Vector3(xSpawnOffset, ySpawnOffset, zBotSpawnOffset - (obstacles[randomIndexer].GetComponent<Transform>().localScale.z / 2)), Quaternion.identity);
-            Instantiate(obstacles[randomIndexer], new Vector3(xSpawnOffset, ySpawnOffset, -zBotSpawnOffset + (obstacles[randomIndexer].GetComponent<Transform>().localScale.z / 2)), Quaternion.identity);
+            Instantiate(obstacles[randomIndexer], new Vector3(spawnLocation.position.x + xSpawnOffset, spawnLocation.position.y + ySpawnOffset, spawnLocation.position.z + zBotSpawnOffset - (obstacles[randomIndexer].GetComponent<Transform>().localScale.z * 0.5f)), Quaternion.identity);
+            Instantiate(obstacles[randomIndexer], new Vector3(spawnLocation.position.x + xSpawnOffset, spawnLocation.position.y + ySpawnOffset, spawnLocation.position.z - zBotSpawnOffset + (obstacles[randomIndexer].GetComponent<Transform>().localScale.z * 0.5f)), Quaternion.identity);
         }
     }
 
